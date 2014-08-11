@@ -3,7 +3,6 @@ package Me.MrEditor97.CommandVoter.Rewards;
 import org.bukkit.entity.Player;
 
 import Me.MrEditor97.CommandVoter.CommandVoter;
-import Me.MrEditor97.CommandVoter.Messages.Message;
 import Me.MrEditor97.CommandVoter.Util.Util;
 
 public class Level {
@@ -17,7 +16,7 @@ public class Level {
 	//Get the Reward Level the player is on
 	public int getLevel(Player target) {
 		Util util = new Util(plugin);
-		Message message = new Message(plugin);
+		//Message message = new Message(plugin);
 		
 		//Get Reward's
 		int size = plugin.getConfig().getConfigurationSection("rewards").getKeys(false).size();
@@ -50,14 +49,12 @@ public class Level {
 						}
 					}
 				} else {
-					//Message player, with the message as defined in the configuration file
-					message.send(target, plugin.getConfig().getString("messages.noRewardsOther"));
-					break;
+					//Return 0 (False)
+					return 0;
 				}
 			} else {
-				//Message player, with the message as defined in the configuration file
-				message.send(target, plugin.getConfig().getString("messages.noRewards"));
-				break;
+				//Return 0 (False)
+				return 0;
 			}
 		}
 		return 0;
