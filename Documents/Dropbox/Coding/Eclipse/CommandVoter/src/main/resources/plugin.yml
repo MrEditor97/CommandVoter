@@ -7,17 +7,14 @@ commands:
     description: Voting link
     usage: /vote
     permission: commandvoter.vote
-    permission-message: You don't have permission to use this command
   topvoters:
     description: Top Voters List command
     usage: /topvoters
     permission: commandvoter.topvoters
-    permission-message: You don't have permission to use this command
   rewards:
     description: Player rewards for voting
     usage: /rewards
     permission: commandvoter.rewards
-    permission-message: You don't have permission to use this command
 
 permissions:
   commandvoter.*:
@@ -32,10 +29,10 @@ permissions:
     default: true
   commandvoter.topvoters:
     description: Allows permission to the /topvoters command
-    default: op
+    default: true
   commandvoter.rewards:
     description: Allows permission to the /reward command (Only for the player who performed the command)
-    default: false
+    default: true
   commandvoter.rewards.others:
     description: Allows permission to the /reward command (All players)
     default: op
