@@ -50,7 +50,9 @@ public class CommandVoter extends JavaPlugin {
 		//saveConfig();
 	}
 	
+	//Start Mertics
 	public void startMetrics() {
+		//Check if Metrics have been enabled in the configuration file
 		if (getConfig().getBoolean("enable-metrics") == true) {
 			log.info("[CommandVoter] Metrics have been enabled!");
 			try {
