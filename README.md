@@ -5,7 +5,7 @@ CommandVoter is a powerful plugin for Minecraft.
 
 This plugin allows you as a server owner to be able to make your server more popular.
 
-> So, what does it do?
+#####So, what does it do?
 
 * Sends the player a Voting Link when the player performs the command /vote
 * Admins and players who have the permissions can use /topvoters to be able to get a list of the top 5 (or how ever many, changeable in the configuration file)
