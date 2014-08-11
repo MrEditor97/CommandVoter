@@ -30,7 +30,7 @@ votelinks:
   - '&2%p you can vote for use by clicking the link!'
   - '&6Click the link to vote (&4http://vote-link.com&6)'
   - '&7Another vote link'
-  - '&2%p, you have voted %v times'
+  - '&2%p, you have voted &5%v times'
 
 rewards:
   '1':
