@@ -19,4 +19,4 @@ This plugin allows you as a server owner to be able to make your server more pop
   * If a player manages to be able to get the your maxium specified vote threshold, don't worry. They will keep on getting rewards, for how ever many times they vote after that. They will get the last specified thresholds votes
 
 
-For instructions use: https://github.com/MrEditor97/CommandVoter/wiki
+For documentation use: https://github.com/MrEditor97/CommandVoter/wiki
