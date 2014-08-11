@@ -1,0 +1,40 @@
+name: CommandVoter
+main: Me.MrEditor97.CommandVoter.CommandVoter
+version: 0.0.7
+depends: [Votifier]
+commands:
+  vote:
+    description: Voting link
+    usage: /vote
+    permission: commandvoter.vote
+  topvoters:
+    description: Top Voters List command
+    usage: /topvoters
+    permission: commandvoter.topvoters
+  rewards:
+    description: Player rewards for voting
+    usage: /rewards
+    permission: commandvoter.rewards
+
+permissions:
+  commandvoter.*:
+    description: Gives access to all commands
+    children:
+      commandvoter.vote: true
+      commandvoter.topvoters: true
+      commandvoter.rewards: true
+      commandvoter.rewards.others: true
+  commandvoter.vote:
+    description: Allows permission to the /vote command
+    default: true
+  commandvoter.topvoters:
+    description: Allows permission to the /topvoters command
+    default: true
+  commandvoter.rewards:
+    description: Allows permission to the /reward command (Only for the player who performed the command)
+    default: true
+  commandvoter.rewards.others:
+    description: Allows permission to the /reward command (All players)
+    default: op
+    children:
+      commandvoter.rewards: true
