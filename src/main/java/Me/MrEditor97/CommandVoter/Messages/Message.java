@@ -26,7 +26,7 @@ public class Message {
 	public void top(CommandSender sender, Map<String, Integer> timesVoted, String message, int topVotersLength) {
 		Util util = new Util(plugin);
 		
-		int topPlayers = plugin.getConfig().getInt("listTopVoters");
+		int topPlayers = plugin.getConfig().getInt("listTopVoters") -1;
 		int i = 0;
 		
 		for (Map.Entry<String, Integer> entry : util.sortByValues(timesVoted).entrySet()) {
