@@ -5,7 +5,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import Me.MrEditor97.CommandVoter.CommandVoter;
-import Me.MrEditor97.CommandVoter.Messages.Message;
 import Me.MrEditor97.CommandVoter.Rewards.Reward;
 
 public class Rewards {
@@ -17,9 +16,9 @@ public class Rewards {
 	}
 	
 	//When the player peforms the command
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	public void command(boolean permission, CommandSender sender, Command cmd, String label, String[] args) {
-		Message message = new Message(plugin);
+//		Message message = new Message(plugin);
 		Reward reward = new Reward(plugin);
 		
 		Player player = (Player) sender;
@@ -27,20 +26,20 @@ public class Rewards {
 		//If a player has only typed /rewards
 		if (args.length == 0) {
 			reward.get(player);
-		} else {
-			//Check if the player has permission to do /rewards [player]
-			if (permission = true) {
-				Player target = plugin.getServer().getPlayer(args[0]);
-				
-				if (target == null) {
-					message.online(player, plugin.getConfig().getString("messages.playerNotOnline"), args[0]);
-				} else {
-					reward.getOther(player, target);
-				}
-			} else if (permission = false) {
-				//Message player
-				message.permission(player, plugin.getConfig().getString("messages.permission"));
-			}
-		}
+		} // else {
+//			//Check if the player has permission to do /rewards [player]
+//			if (permission = true) {
+//				Player target = plugin.getServer().getPlayer(args[0]);
+//				
+//				if (target == null) {
+//					message.online(player, plugin.getConfig().getString("messages.playerNotOnline"), args[0]);
+//				} else {
+//					reward.getOther(player, target);
+//				}
+//			} else if (permission = false) {
+//				//Message player
+//				message.permission(player, plugin.getConfig().getString("messages.permission"));
+//			}
+//		}
 	}
 }
